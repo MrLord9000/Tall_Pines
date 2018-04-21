@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 
 
 public class NextLev : MonoBehaviour {
 
-    public string Name;
+    public int LevelNumber;
 
     void OnMouseDown()
     {
-        //Application.UnloadLevel(Application.loadedLevelName);
-        Application.LoadLevel(Name);
-        
-        //Application.LoadLevel()
+        SceneManager.LoadScene(LevelNumber);
     }
 }
 
